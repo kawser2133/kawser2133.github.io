@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kawser Hamid — Software Engineer & Technical Lead</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0c0e14;
+  --ink2:#3a3d4a;
+  --muted:#7a7f90;
+  --muted2:#b0b5c4;
+  --green:#1b6b42;
+  --green2:#2a8a55;
+  --green-pale:#edf5f0;
+  --border:#e6e9f0;
+  --bg:#f7f8fc;
+  --card:#ffffff;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Outfit',system-ui,sans-serif;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:99;background:rgba(247,248,252,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:14px 0}
+.nav-inner{max-width:860px;margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;align-items:center}
+.nav-name{font-family:var(--serif);font-size:16px;color:var(--ink)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:12px;font-weight:500;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--green)}
+.print-btn{font-size:12px;font-weight:500;letter-spacing:.5px;color:var(--green);background:var(--green-pale);border:none;padding:7px 16px;border-radius:6px;cursor:pointer;transition:opacity .2s}
+.print-btn:hover{opacity:.8}
+
+/* WRAP */
+.wrap{max-width:860px;margin:0 auto;padding:0 40px}
+
+/* HERO */
+.hero{padding:88px 0 72px;border-bottom:1px solid var(--border)}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-pale);color:var(--green);font-size:11.5px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:28px}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green)}
+h1{font-family:var(--serif);font-size:56px;line-height:1.07;letter-spacing:-2px;color:var(--ink);margin-bottom:20px}
+h1 i{font-style:italic;color:var(--green)}
+.hero-bio{font-size:16px;color:var(--ink2);max-width:560px;line-height:1.8;margin-bottom:32px;font-weight:300}
+.hero-contacts{display:flex;flex-wrap:wrap;gap:8px}
+.contact-pill{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border:1px solid var(--border);border-radius:8px;font-size:13px;color:var(--ink2);text-decoration:none;background:var(--card);transition:all .2s}
+.contact-pill:hover{border-color:var(--green2);color:var(--green);background:var(--green-pale)}
+.contact-pill svg{width:13px;height:13px;opacity:.4;flex-shrink:0}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;padding-top:40px;border-top:1px solid var(--border)}
+.stat{padding-right:24px;border-right:1px solid var(--border)}
+.stat:last-child{border-right:none}
+.stat-n{font-family:var(--serif);font-size:38px;color:var(--ink);line-height:1;margin-bottom:4px}
+.stat-l{font-size:11.5px;color:var(--muted)}
+
+/* SECTIONS */
+section{padding:68px 0;border-bottom:1px solid var(--border)}
+section:last-child{border-bottom:none}
+.sec-eyebrow{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:32px;display:flex;align-items:center;gap:14px}
+.sec-eyebrow::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* ── SKILLS — row based ── */
+.skills-table{width:100%;border-collapse:collapse}
+.skills-table tr{border-bottom:1px solid var(--border)}
+.skills-table tr:last-child{border-bottom:none}
+.skills-table td{padding:14px 0;vertical-align:top}
+.skill-label{font-size:11.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);width:180px;padding-top:16px;padding-right:24px;white-space:nowrap}
+.pills{display:flex;flex-wrap:wrap;gap:7px;padding:4px 0}
+.pill{font-size:12.5px;padding:6px 13px;border-radius:6px;border:1px solid var(--border);color:var(--ink2);background:var(--card);line-height:1.2}
+.pill.p{background:var(--green-pale);border-color:transparent;color:var(--green);font-weight:500}
+
+/* ── PROJECTS ── */
+.project-list{display:flex;flex-direction:column;gap:12px}
+.pcard{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px 26px;position:relative;transition:border-color .2s,box-shadow .2s}
+.pcard::before{content:'';position:absolute;left:0;top:14px;bottom:14px;width:3px;background:transparent;border-radius:0 3px 3px 0;transition:background .2s}
+.pcard:hover{border-color:#c2d8ca;box-shadow:0 4px 20px rgba(27,107,66,.07)}
+.pcard:hover::before{background:var(--green)}
+.pcard-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:8px}
+.pcard-title{font-family:var(--serif);font-size:17px;color:var(--ink);letter-spacing:-.2px;line-height:1.3}
+.pcard-co{font-size:12px;color:var(--muted2);white-space:nowrap;padding-top:2px;flex-shrink:0}
+.ptags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
+.ptag{font-size:11px;background:var(--green-pale);color:var(--green2);padding:3px 9px;border-radius:4px;font-weight:500}
+.pcard ul{padding-left:15px}
+.pcard ul li{font-size:13px;color:var(--ink2);margin-bottom:4px;line-height:1.6}
+
+/* ── EXPERIENCE ── */
+.exp-block{margin-bottom:36px}
+.exp-block:last-child{margin-bottom:0}
+.exp-company-row{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:10px;margin-bottom:2px;border-bottom:2px solid var(--ink)}
+.exp-company-name{font-family:var(--serif);font-size:17px;color:var(--ink)}
+.exp-company-loc{font-size:12px;color:var(--muted)}
+.exp-roles{margin-bottom:10px}
+.exp-role-row{display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border)}
+.exp-role-row:last-child{border-bottom:none}
+.exp-role-title{font-size:14px;font-weight:500;color:var(--ink2)}
+.exp-period{font-size:12px;color:var(--muted);white-space:nowrap}
+.exp-bullets{padding-left:15px;margin-bottom:8px}
+.exp-bullets li{font-size:13px;color:var(--muted);margin-bottom:4px;line-height:1.55}
+
+/* ── CERTIFICATIONS ── */
+.certs-list{display:flex;flex-direction:column;gap:10px}
+.cert-card{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start}
+.cert-icon{width:32px;height:32px;border-radius:7px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cert-icon svg{width:15px;height:15px;stroke:var(--green);fill:none;stroke-width:1.8}
+.cert-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:2px;line-height:1.4}
+.cert-sub{font-size:11.5px;color:var(--muted)}
+
+/* ── AWARDS ── */
+.awards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.award-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px;position:relative;overflow:hidden}
+.award-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--green)}
+.award-yr{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+.award-title{font-size:14.5px;font-weight:500;color:var(--ink);margin-bottom:4px;font-family:var(--serif);line-height:1.3}
+.award-org{font-size:11.5px;color:var(--muted)}
+
+/* ── EDUCATION ── */
+.edu-list{display:flex;flex-direction:column;gap:10px}
+.edu-card{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.edu-degree{font-size:13.5px;font-weight:500;color:var(--ink);margin-bottom:2px}
+.edu-inst{font-size:12px;color:var(--muted)}
+.edu-year{font-size:12px;color:var(--muted2);white-space:nowrap;flex-shrink:0}
+
+/* FOOTER */
+footer{background:var(--ink);padding:40px 0;text-align:center}
+.footer-name{font-family:var(--serif);font-size:19px;color:#fff;margin-bottom:12px}
+.footer-links{display:flex;justify-content:center;gap:22px;flex-wrap:wrap}
+.footer-links a{font-size:13px;color:#6a7080;text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--green2)}
+
+/* ANIMATIONS */
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.hero>*{animation:up .6s ease both}
+.hero>*:nth-child(1){animation-delay:.04s}
+.hero>*:nth-child(2){animation-delay:.11s}
+.hero>*:nth-child(3){animation-delay:.18s}
+.hero>*:nth-child(4){animation-delay:.25s}
+.hero>*:nth-child(5){animation-delay:.32s}
+
+/* ── PRINT ── */
+@media print{
+  @page{margin:18mm 16mm;size:A4}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  nav,.print-btn,footer{display:none!important}
+  body{background:#fff;font-size:13px}
+  .wrap{max-width:100%;padding:0}
+  .hero{padding:28px 0 24px}
+  h1{font-size:36px}
+  section{padding:28px 0}
+  .hero-stats{margin-top:24px;padding-top:18px}
+  .stat-n{font-size:28px}
+  .pcard,.cert-card,.award-card,.edu-card{break-inside:avoid}
+  .pcard:hover,.pcard:hover::before{border-color:var(--border);box-shadow:none;background:transparent}
+  .exp-block{break-inside:avoid}
+  .hero-badge{background:var(--green-pale)!important;-webkit-print-color-adjust:exact}
+  .pill.p{background:var(--green-pale)!important;-webkit-print-color-adjust:exact}
+  .ptag{background:var(--green-pale)!important;-webkit-print-color-adjust:exact}
+  .award-card::after{background:var(--green)!important;-webkit-print-color-adjust:exact}
+  .cert-icon{background:var(--green-pale)!important;-webkit-print-color-adjust:exact}
+}
+
+@media(max-width:640px){
+  h1{font-size:36px}
+  .hero-stats{grid-template-columns:1fr 1fr;gap:20px}
+  .stat{border-right:none;padding-right:0}
+  .skill-label{width:120px}
+  .awards-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-name">Kawser Hamid</span>
+    <ul class="nav-links">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#awards">Awards</a></li>
+    </ul>
+    <!-- <button class="print-btn" onclick="window.print()">Print / Save PDF</button> -->
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge"><span class="hero-badge-dot"></span>Open to Freelance & Contract Work</div>
+  <h1>Software Engineer<br>& <i>Technical Lead</i></h1>
+  <p class="hero-bio">9+ years architecting and delivering high-performance systems across FinTech, Government, ERP, and SaaS. Hands-on engineer who drives technical decisions, leads teams, and ships production-grade software at scale.</p>
+  <div class="hero-contacts">
+    <a class="contact-pill" href="mailto:kawser2133@gmail.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+      kawser2133@gmail.com
+    </a>
+    <a class="contact-pill" href="https://linkedin.com/in/kawser2133" target="_blank">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 10v7M7 7v.01M12 10v7m0-4a3 3 0 0 1 6 0v4"/></svg>
+      linkedin.com/in/kawser2133
+    </a>
+    <a class="contact-pill" href="https://github.com/kawser2133" target="_blank">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      github.com/kawser2133
+    </a>
+    <!-- <a class="contact-pill" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      Dhaka, Bangladesh
+    </a> -->
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-n">9+</div><div class="stat-l">Years of Experience</div></div>
+    <div class="stat"><div class="stat-n">8+</div><div class="stat-l">Major Projects</div></div>
+    <div class="stat"><div class="stat-n">3×</div><div class="stat-l">Microsoft Certified</div></div>
+    <div class="stat"><div class="stat-n">2×</div><div class="stat-l">Top Performer</div></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-eyebrow">Skills & Technologies</div>
+  <table class="skills-table">
+    <tr>
+      <td class="skill-label">Languages</td>
+      <td>
+        <div class="pills">
+          <span class="pill p">C# / .NET Core</span>
+          <span class="pill p">Java / Spring Boot</span>
+          <span class="pill p">Python</span>
+          <span class="pill p">JavaScript</span>
+          <span class="pill">.NET Framework</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="skill-label">Frontend</td>
+      <td>
+        <div class="pills">
+          <span class="pill p">React.js</span>
+          <span class="pill p">Angular</span>
+          <span class="pill">AngularJS</span>
+          <span class="pill">HTML5 / CSS3</span>
+          <span class="pill">Bootstrap</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="skill-label">Databases</td>
+      <td>
+        <div class="pills">
+          <span class="pill p">MS SQL Server</span>
+          <span class="pill p">Oracle</span>
+          <span class="pill p">MySQL</span>
+          <span class="pill p">PostgreSQL</span>
+          <span class="pill">MongoDB</span>
+          <span class="pill">Redis</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="skill-label">Architecture</td>
+      <td>
+        <div class="pills">
+          <span class="pill p">Microservices</span>
+          <span class="pill p">Clean Architecture</span>
+          <span class="pill p">REST / Web API</span>
+          <span class="pill">Event-Driven Design</span>
+          <span class="pill">Multi-Tenancy</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="skill-label">Messaging</td>
+      <td>
+        <div class="pills">
+          <span class="pill p">Apache Kafka</span>
+          <span class="pill p">RabbitMQ</span>
+          <span class="pill p">Elasticsearch</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="skill-label">DevOps & Tools</td>
+      <td>
+        <div class="pills">
+          <span class="pill p">Docker</span>
+          <span class="pill p">Kubernetes</span>
+          <span class="pill">GitHub / GitLab</span>
+          <span class="pill">Grafana</span>
+          <span class="pill">Seq</span>
+          <span class="pill">Jira</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="skill-label">AI & API Services</td>
+      <td>
+        <div class="pills">
+          <span class="pill p">Claude API</span>
+          <span class="pill p">OpenAI API</span>
+          <span class="pill">GitHub Copilot</span>
+          <span class="pill">OCR / Vision AI</span>
+          <span class="pill">Biometric APIs</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="skill-label">Domain</td>
+      <td>
+        <div class="pills">
+          <span class="pill p">FinTech</span>
+          <span class="pill p">Agent Banking</span>
+          <span class="pill p">eKYC</span>
+          <span class="pill p">SaaS</span>
+          <span class="pill p">ERP</span>
+          <span class="pill ">AML Compliance</span>
+          <span class="pill">Government Systems</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="skill-label">Process</td>
+      <td>
+        <div class="pills">
+          <span class="pill p">Agile / Scrum</span>
+          <span class="pill">TDD</span>
+          <span class="pill">Code Review</span>
+          <span class="pill">Technical Mentoring</span>
+          <span class="pill">Architecture Review</span>
+        </div>
+      </td>
+    </tr>
+  </table>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="sec-eyebrow">Key Projects</div>
+  <div class="project-list">
+
+    <div class="pcard">
+      <div class="pcard-top">
+        <div class="pcard-title">wyzerp™ — Enterprise SaaS ERP Platform</div>
+        <div class="pcard-co">Wyze Tech Ltd</div>
+      </div>
+      <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">Angular</span><span class="ptag">MySQL</span><span class="ptag">Multi-Tenant</span><span class="ptag">Cloud</span><span class="ptag">Microservices</span></div>
+      <ul>
+        <li>Defined architectural strategy for a multi-tenant SaaS ERP covering Finance, HRMS, SCM, LMS, and Payroll.</li>
+        <li>Led cross-team delivery, mentored engineers, and owned platform security and operational resilience.</li>
+      </ul>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-top">
+        <div class="pcard-title">Food Stock & Market Monitoring System (FSMMS)</div>
+        <div class="pcard-co">GIGA TECH — Govt. of Bangladesh</div>
+      </div>
+      <div class="ptags"><span class="ptag">Java Spring Boot</span><span class="ptag">Angular</span><span class="ptag">Oracle</span><span class="ptag">Redis</span><span class="ptag">Kafka</span><span class="ptag">Microservices</span></div>
+      <ul>
+        <li>National-scale platform for food procurement, stock management, and real-time market price monitoring.</li>
+        <li>Event-driven microservices for high availability across government agencies nationwide.</li>
+      </ul>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-top">
+        <div class="pcard-title">Agent Banking Platform</div>
+        <div class="pcard-co">DataSoft Systems Bangladesh Ltd</div>
+      </div>
+      <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">Oracle / MSSQL</span><span class="ptag">Angular</span><span class="ptag">Redis</span><span class="ptag">Web API</span></div>
+      <ul>
+        <li>End-to-end banking platform: customer onboarding, core banking integration, remittance, FDR/DPS, and loan management.</li>
+        <li>Integrated NID biometric verification with the Bangladesh Election Commission database.</li>
+      </ul>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-top">
+        <div class="pcard-title">Digital Onboarding & eKYC Solution</div>
+        <div class="pcard-co">DataSoft Systems Bangladesh Ltd</div>
+      </div>
+      <div class="ptags"><span class="ptag">Python</span><span class="ptag">ASP.NET Core</span><span class="ptag">Oracle / MSSQL</span><span class="ptag">Angular</span><span class="ptag">OCR / Face Match</span></div>
+      <ul>
+        <li>AI-driven platform using OCR, face matching, and fingerprint biometrics — reduced onboarding from days to minutes.</li>
+      </ul>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-top">
+        <div class="pcard-title">AML Compliance System</div>
+        <div class="pcard-co">DataSoft Systems Bangladesh Ltd</div>
+      </div>
+      <div class="ptags"><span class="ptag">ASP.NET MVC</span><span class="ptag">Kafka</span><span class="ptag">Elasticsearch</span><span class="ptag">MSSQL</span><span class="ptag">REST API</span></div>
+      <ul>
+        <li>Automated transaction monitoring, customer due diligence, and AML risk screening for regulated financial institutions.</li>
+      </ul>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-top">
+        <div class="pcard-title">Fingerprint Verification Service</div>
+        <div class="pcard-co">GIGA TECH Limited</div>
+      </div>
+      <div class="ptags"><span class="ptag">Biometric API</span><span class="ptag">ASP.NET Core</span><span class="ptag">Election Commission DB</span></div>
+      <ul>
+        <li>Built fingerprint verification linked to national Election Commission database — used for banking onboarding, agent auth, and loan verification.</li>
+      </ul>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-top">
+        <div class="pcard-title">aPOP — Full-Featured ERP System</div>
+        <div class="pcard-co">APLOS Global Limited</div>
+      </div>
+      <div class="ptags"><span class="ptag">ASP.NET MVC</span><span class="ptag">MSSQL</span><span class="ptag">AngularJS</span><span class="ptag">Bootstrap</span></div>
+      <ul>
+        <li>Contributed to ERP covering HR, Accounting, CRM, Inventory, Planning, and Production modules.</li>
+      </ul>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-top">
+        <div class="pcard-title">SaaSBase — Open-Source Multi-Tenant Foundation</div>
+        <div class="pcard-co">Open Source · github.com/kawser2133/saas-base</div>
+      </div>
+      <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">Clean Architecture</span><span class="ptag">Docker</span><span class="ptag">SQL Server</span></div>
+      <ul>
+        <li>Production-ready SaaS foundation across Domain, Application, Infrastructure, and API layers — publicly available on GitHub.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="sec-eyebrow">Professional Experience</div>
+
+  <div class="exp-block">
+    <div class="exp-company-row">
+      <span class="exp-company-name">Wyze Tech Ltd</span>
+      <span class="exp-company-loc">Dhaka, Bangladesh</span>
+    </div>
+    <div class="exp-roles">
+      <div class="exp-role-row">
+        <span class="exp-role-title">Staff Software Engineer</span>
+        <span class="exp-period">Oct 2025 – Present</span>
+      </div>
+    </div>
+    <ul class="exp-bullets">
+      <li>Driving architectural direction for wyzerp™ — a multi-tenant SaaS ERP platform deployed on Cloud.</li>
+      <li>Leading cross-team engineering initiatives, mentoring engineers, and owning platform uptime and security.</li>
+    </ul>
+  </div>
+
+  <div class="exp-block">
+    <div class="exp-company-row">
+      <span class="exp-company-name">GIGA TECH Limited</span>
+      <span class="exp-company-loc">Dhaka, Bangladesh</span>
+    </div>
+    <div class="exp-roles">
+      <div class="exp-role-row">
+        <span class="exp-role-title">Staff Software Engineer</span>
+        <span class="exp-period">May 2025 – Sep 2025</span>
+      </div>
+      <div class="exp-role-row">
+        <span class="exp-role-title">Senior Software Engineer</span>
+        <span class="exp-period">Dec 2023 – Apr 2025</span>
+      </div>
+    </div>
+    <ul class="exp-bullets">
+      <li>Led FSMMS — national food stock and market monitoring platform for the Government of Bangladesh.</li>
+      <li>Built Fingerprint Verification Service integrated with Bangladesh Election Commission database.</li>
+      <li>Contributed to eKYC, AML, and Dynamic Archiving Service with multi-DB and audit logging support.</li>
+      <li>Conducted architectural reviews, requirements analysis, and cross-team code quality assessments.</li>
+    </ul>
+  </div>
+
+  <div class="exp-block">
+    <div class="exp-company-row">
+      <span class="exp-company-name">DataSoft Systems Bangladesh Ltd</span>
+      <span class="exp-company-loc">Dhaka, Bangladesh</span>
+    </div>
+    <div class="exp-roles">
+      <div class="exp-role-row">
+        <span class="exp-role-title">Senior Software Engineer</span>
+        <span class="exp-period">Jan 2022 – Nov 2023</span>
+      </div>
+      <div class="exp-role-row">
+        <span class="exp-role-title">Software Engineer</span>
+        <span class="exp-period">Apr 2019 – Dec 2021</span>
+      </div>
+    </div>
+    <ul class="exp-bullets">
+      <li>Built Agent Banking platform, eKYC solution, and AML Compliance system end-to-end.</li>
+      <li>Led R&D, mentored junior engineers, and delivered client training across branch rollouts.</li>
+    </ul>
+  </div>
+
+  <div class="exp-block">
+    <div class="exp-company-row">
+      <span class="exp-company-name">APLOS Global Limited</span>
+      <span class="exp-company-loc">Dhaka, Bangladesh</span>
+    </div>
+    <div class="exp-roles">
+      <div class="exp-role-row">
+        <span class="exp-role-title">Software Engineer</span>
+        <span class="exp-period">Jan 2017 – Mar 2019</span>
+      </div>
+    </div>
+    <ul class="exp-bullets">
+      <li>Contributed to aPOP ERP covering HR, Accounting, CRM, Inventory, Planning, and Production.</li>
+    </ul>
+  </div>
+
+  <div class="exp-block">
+    <div class="exp-company-row">
+      <span class="exp-company-name">UY Systems Ltd / Express Digitally</span>
+      <span class="exp-company-loc">Dhaka, Bangladesh</span>
+    </div>
+    <div class="exp-roles">
+      <div class="exp-role-row">
+        <span class="exp-role-title">Software Developer</span>
+        <span class="exp-period">Oct 2016 – Dec 2016</span>
+      </div>
+    </div>
+    <ul class="exp-bullets">
+      <li>Built Inventory Management System covering Requisition, Purchase Orders, Stock Workflow, and Reporting.</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="sec-eyebrow">Certifications</div>
+  <div class="certs-list">
+    <div class="cert-card">
+      <div class="cert-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <div><div class="cert-title">Microsoft Certified Solution Developer (MCSD)</div><div class="cert-sub">Microsoft Corporation · ID: 12988101</div></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <div><div class="cert-title">Microsoft Certified Professional (MCP) · MCSA</div><div class="cert-sub">Microsoft Corporation</div></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <div><div class="cert-title">70-487: Developing Microsoft Azure & Web Services</div><div class="cert-sub">Microsoft Corporation</div></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <div><div class="cert-title">70-486: Developing ASP.NET MVC Web Applications</div><div class="cert-sub">Microsoft Corporation</div></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <div><div class="cert-title">70-480: Programming in HTML5 with JavaScript & CSS3</div><div class="cert-sub">Microsoft Corporation</div></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+      <div><div class="cert-title">Professional Diploma — Enterprise Systems Analysis & Design with C#.Net</div><div class="cert-sub">IDB-BISEW IT Scholarship · 2017 · Outstanding Academic Performance Award</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="sec-eyebrow">Awards & Recognition</div>
+  <div class="awards-grid">
+    <div class="award-card">
+      <div class="award-yr">2022</div>
+      <div class="award-title">Top Performer of the Year</div>
+      <div class="award-org">DataSoft Systems Bangladesh Ltd · Recognised 2023</div>
+    </div>
+    <div class="award-card">
+      <div class="award-yr">2021</div>
+      <div class="award-title">Top Performer of the Year</div>
+      <div class="award-org">DataSoft Systems Bangladesh Ltd · Recognised 2022</div>
+    </div>
+    <div class="award-card">
+      <div class="award-yr">2017</div>
+      <div class="award-title">Outstanding Academic Performance</div>
+      <div class="award-org">IDB-BISEW IT Scholarship Program</div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="sec-eyebrow">Education</div>
+  <div class="edu-list">
+    <div class="edu-card">
+      <div><div class="edu-degree">Professional Diploma — Enterprise Systems Analysis & Design with C#.Net</div><div class="edu-inst">IDB-BISEW IT Scholarship</div></div>
+      <div class="edu-year">2017</div>
+    </div>
+    <div class="edu-card">
+      <div><div class="edu-degree">Master of Business Studies (MBS) — Finance & Banking</div><div class="edu-inst">National University, Bangladesh</div></div>
+      <div class="edu-year">2016</div>
+    </div>
+    <div class="edu-card">
+      <div><div class="edu-degree">Bachelor of Business Studies (BBS) — Finance & Banking</div><div class="edu-inst">National University, Bangladesh</div></div>
+      <div class="edu-year">2014</div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="footer-name">Md. Kawser Hamid</div>
+  <div class="footer-links">
+    <a href="mailto:kawser2133@gmail.com">kawser2133@gmail.com</a>
+    <a href="https://linkedin.com/in/kawser2133" target="_blank">LinkedIn</a>
+    <a href="https://github.com/kawser2133" target="_blank">GitHub</a>
+    <!-- <a href="#">Dhaka, Bangladesh</a> -->
+  </div>
+</footer>
+
+</body>
+</html>
