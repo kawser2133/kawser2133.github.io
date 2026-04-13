@@ -30,7 +30,7 @@ nav{position:sticky;top:0;z-index:99;background:rgba(247,248,252,.95);backdrop-f
 .nav-inner{max-width:1000px;margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;align-items:center}
 .nav-name{font-family:var(--serif);font-size:16px;color:var(--ink)}
 .nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{font-size:12px;font-weight:500;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a{font-size:12px;font-weight:500;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;position:relative}
 .nav-links a:hover{color:var(--green)}
 .print-btn{font-size:12px;font-weight:500;letter-spacing:.5px;color:var(--green);background:var(--green-pale);border:none;padding:7px 16px;border-radius:6px;cursor:pointer;transition:opacity .2s}
 .print-btn:hover{opacity:.8}
@@ -44,7 +44,7 @@ nav{position:sticky;top:0;z-index:99;background:rgba(247,248,252,.95);backdrop-f
 .hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green)}
 h1{font-family:var(--serif);font-size:56px;line-height:1.07;letter-spacing:-2px;color:var(--ink);margin-bottom:20px}
 h1 i{font-style:italic;color:var(--green)}
-.hero-bio{font-size:16px;color:var(--ink2);max-width:680px;line-height:1.8;margin-bottom:32px;font-weight:300}
+.hero-bio{font-size:16px;color:var(--ink2);max-width:880px;line-height:1.8;margin-bottom:32px;font-weight:300}
 .hero-contacts{display:flex;flex-wrap:wrap;gap:8px}
 .contact-pill{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border:1px solid var(--border);border-radius:8px;font-size:13px;color:var(--ink2);text-decoration:none;background:var(--card);transition:all .2s}
 .contact-pill:hover{border-color:var(--green2);color:var(--green);background:var(--green-pale)}
@@ -122,6 +122,17 @@ section:last-child{border-bottom:none}
 .edu-inst{font-size:12px;color:var(--muted)}
 .edu-year{font-size:12px;color:var(--muted2);white-space:nowrap;flex-shrink:0}
 
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:28px;right:28px;width:42px;height:42px;border-radius:50%;background:var(--green);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(27,107,66,.3);opacity:0;transform:translateY(12px);transition:opacity .25s,transform .25s;pointer-events:none;z-index:999}
+.back-to-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.back-to-top:hover{background:var(--green2)}
+.back-to-top svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.2}
+
+/* NAV ACTIVE */
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--green);border-radius:2px;transform:scaleX(0);transition:transform .2s}
+.nav-links a.active{color:var(--green)}
+.nav-links a.active::after{transform:scaleX(1)}
+
 /* FOOTER */
 footer{background:var(--ink);padding:40px 0;text-align:center}
 .footer-name{font-family:var(--serif);font-size:19px;color:#fff;margin-bottom:12px}
@@ -180,6 +191,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
       <li><a href="#experience">Experience</a></li>
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#awards">Awards</a></li>
+      <li><a href="#education">Education</a></li>
     </ul>
     <!-- <button class="print-btn" onclick="window.print()">Print / Save PDF</button> -->
   </div>
@@ -191,7 +203,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
 <section class="hero">
   <div class="hero-badge"><span class="hero-badge-dot"></span>Open to Freelance & Contract Work</div>
   <h1>Software Engineer<br>& <i>Technical Lead</i></h1>
-  <p class="hero-bio">9+ years architecting and delivering high-performance systems across FinTech, Government, ERP, and SaaS. Hands-on engineer who drives technical decisions, leads teams, and ships production-grade software at scale.</p>
+  <p class="hero-bio">Software Engineer with 9+ years of experience designing and delivering production-grade systems across FinTech, GovTech, ERP, EdTech, Healthcare, and SaaS. Expert in C# (.NET Core), Java Spring Boot, and Python — with a strong track record in Agent Banking, eKYC, AML Compliance, and AI-driven analytics. Hands-on technical leader who architects scalable multi-tenant platforms, drives cross-team engineering decisions, and delivers complex freelance and enterprise projects end-to-end.</p>
   <div class="hero-contacts">
     <a class="contact-pill" href="mailto:kawser2133@gmail.com">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
@@ -226,10 +238,25 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
       <td class="skill-label">Languages</td>
       <td>
         <div class="pills">
-          <span class="pill p">C# / .NET Core</span>
-          <span class="pill p">Java / Spring Boot</span>
+          <span class="pill p">C#</span>
+          <span class="pill p">Java</span>
           <span class="pill p">Python</span>
           <span class="pill p">JavaScript</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">SQL</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="skill-label">Frameworks</td>
+      <td>
+        <div class="pills">
+          <span class="pill p">ASP.NET Core</span>
+          <span class="pill p">Spring Boot</span>
+          <span class="pill p">FastAPI</span>
+          <span class="pill p">Node.js</span>
+          <span class="pill">Django</span>
+          <span class="pill">Frappe</span>
           <span class="pill">.NET Framework</span>
         </div>
       </td>
@@ -252,7 +279,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
         <div class="pills">
           <span class="pill p">MS SQL Server</span>
           <span class="pill p">Oracle</span>
-          <span class="pill p">MySQL</span>
+          <span class="pill p">MySQL / MariaDB</span>
           <span class="pill p">PostgreSQL</span>
           <span class="pill">MongoDB</span>
           <span class="pill">Redis</span>
@@ -300,6 +327,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
         <div class="pills">
           <span class="pill p">Claude API</span>
           <span class="pill p">OpenAI API</span>
+          <span class="pill p">Gemini API</span>
           <span class="pill">GitHub Copilot</span>
           <span class="pill">OCR / Vision AI</span>
           <span class="pill">Biometric APIs</span>
@@ -312,11 +340,21 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
         <div class="pills">
           <span class="pill p">FinTech</span>
           <span class="pill p">Agent Banking</span>
-          <span class="pill p">eKYC</span>
-          <span class="pill p">SaaS</span>
+          <span class="pill p">eKYC / Digital Onboarding</span>
+          <span class="pill p">AML Compliance</span>
+          <span class="pill p">SaaS / Multi-Tenant</span>
           <span class="pill p">ERP</span>
-          <span class="pill ">AML Compliance</span>
-          <span class="pill">Government Systems</span>
+          <span class="pill p">EdTech / LMS</span>
+          <span class="pill p">Business Intelligence</span>
+          <span class="pill p">AI Analytics</span>
+          <span class="pill p">GovTech</span>
+          <span class="pill">Healthcare</span>
+          <span class="pill">E-Commerce</span>
+          <span class="pill">Fleet & Logistics</span>
+          <span class="pill">HR & Payroll</span>
+          <span class="pill">Research Platforms</span>
+          <span class="pill">Field Force Management</span>
+          <span class="pill">Data Archiving</span>
         </div>
       </td>
     </tr>
@@ -790,6 +828,35 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
     <!-- <a href="#">Dhaka, Bangladesh</a> -->
   </div>
 </footer>
+
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+  // Back to top visibility
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 300);
+  }, {passive: true});
+
+  // Scroll spy — active nav
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, {rootMargin: '-30% 0px -60% 0px'});
+
+  sections.forEach(s => observer.observe(s));
+</script>
 
 </body>
 </html>
