@@ -27,7 +27,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:15p
 
 /* NAV */
 nav{position:sticky;top:0;z-index:99;background:rgba(247,248,252,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:14px 0}
-.nav-inner{max-width:860px;margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;align-items:center}
+.nav-inner{max-width:1000px;margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;align-items:center}
 .nav-name{font-family:var(--serif);font-size:16px;color:var(--ink)}
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{font-size:12px;font-weight:500;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
@@ -36,7 +36,7 @@ nav{position:sticky;top:0;z-index:99;background:rgba(247,248,252,.95);backdrop-f
 .print-btn:hover{opacity:.8}
 
 /* WRAP */
-.wrap{max-width:860px;margin:0 auto;padding:0 40px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 40px}
 
 /* HERO */
 .hero{padding:88px 0 72px;border-bottom:1px solid var(--border)}
@@ -44,7 +44,7 @@ nav{position:sticky;top:0;z-index:99;background:rgba(247,248,252,.95);backdrop-f
 .hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green)}
 h1{font-family:var(--serif);font-size:56px;line-height:1.07;letter-spacing:-2px;color:var(--ink);margin-bottom:20px}
 h1 i{font-style:italic;color:var(--green)}
-.hero-bio{font-size:16px;color:var(--ink2);max-width:560px;line-height:1.8;margin-bottom:32px;font-weight:300}
+.hero-bio{font-size:16px;color:var(--ink2);max-width:680px;line-height:1.8;margin-bottom:32px;font-weight:300}
 .hero-contacts{display:flex;flex-wrap:wrap;gap:8px}
 .contact-pill{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border:1px solid var(--border);border-radius:8px;font-size:13px;color:var(--ink2);text-decoration:none;background:var(--card);transition:all .2s}
 .contact-pill:hover{border-color:var(--green2);color:var(--green);background:var(--green-pale)}
@@ -345,31 +345,31 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
         <div class="pcard-title">wyzerp™ — Enterprise SaaS ERP Platform</div>
         <div class="pcard-co">Wyze Tech Ltd</div>
       </div>
-      <div class="ptags"><span class="ptag">Python</span><span class="ptag">Angular</span><span class="ptag">PostgreSQL</span><span class="ptag">Multi-Tenant</span><span class="ptag">Cloud</span><span class="ptag">Microservices</span></div>
+      <div class="ptags"><span class="ptag">Frappe Framework</span><span class="ptag">Python</span><span class="ptag">JavaScript</span><span class="ptag">MariaDB</span><span class="ptag">Multi-Tenant</span><span class="ptag">Cloud</span></div>
       <ul>
-        <li>Defined and drove architectural strategy for wyzerp™ — a cloud-deployed, multi-tenant SaaS ERP covering Finance, HRMS, SCM, LMS, Payroll, and additional modules.</li>
-        <li>Led and coordinated cross-team engineering initiatives spanning multiple concurrent projects; mentored engineers and continuously raised the engineering quality bar.</li>
-        <li>Owned multi-tenant infrastructure security, scalability, and platform uptime — including module integration, release management, and production stability.</li>
+        <li>Enterprise SaaS ERP platform covering Finance, HRMS, Supply Chain Management, Learning Management, and Payroll — deployed in multi-tenant cloud with full tenant data isolation and per-tenant configuration.</li>
+        <li>Modular architecture supports independent development, deployment, and scaling of each business domain without affecting other modules; integrated RBAC, audit logging, and operational monitoring across all tenants.</li>
+        <li>Automated tenant provisioning enables onboarding new organisations without downtime; built-in platform security, compliance controls, and high-availability infrastructure.</li>
       </ul>
     </div>
 
     <div class="pcard">
       <div class="pcard-top">
         <div class="pcard-title">Food Stock & Market Monitoring System (FSMMS)</div>
-        <div class="pcard-co">GIGA TECH — Govt. of Bangladesh</div>
+        <div class="pcard-co">GIGA TECH Limited</div>
       </div>
       <div class="ptags"><span class="ptag">Java Spring Boot</span><span class="ptag">React.js</span><span class="ptag">Oracle</span><span class="ptag">Redis</span><span class="ptag">Kafka</span><span class="ptag">Microservices</span></div>
       <ul>
         <li>National digital platform for food procurement, stock management, distribution tracking, and real-time market price monitoring — serving government agencies and stakeholders across Bangladesh.</li>
-        <li>Event-driven microservices with Kafka for high-throughput data pipelines; Redis caching for real-time price feeds across districts.</li>
-        <li>Led design and development end-to-end, coordinating with government stakeholders for requirements, compliance, and UAT delivery.</li>
+        <li>Event-driven microservices architecture with Kafka for high-throughput data pipelines; Redis caching ensures real-time price feed updates across all districts with sub-second latency.</li>
+        <li>Centralised visibility across the entire food supply chain — from procurement to warehouse stock levels to last-mile distribution — with configurable alert thresholds and compliance reporting for government oversight.</li>
       </ul>
     </div>
 
     <div class="pcard">
       <div class="pcard-top">
         <div class="pcard-title">EduFlex — Digital Learning Management Portal</div>
-        <div class="pcard-co">Freelance / Contract</div>
+        <div class="pcard-co">Freelance</div>
       </div>
       <div class="ptags"><span class="ptag">Node.js</span><span class="ptag">React.js</span><span class="ptag">MySQL</span><span class="ptag">Zoom API</span><span class="ptag">SSLCommerz</span><span class="ptag">Trinity Similarity</span></div>
       <ul>
@@ -387,16 +387,16 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
       </div>
       <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">Oracle / MSSQL</span><span class="ptag">Angular</span><span class="ptag">Redis</span><span class="ptag">Web API</span></div>
       <ul>
-        <li>Enterprise banking platform enabling financial inclusion via door-to-door banking agents — full customer and account management, core banking API integration, all major transaction types, utility bill payments, and remittance.</li>
-        <li>Built FDR/DPS module, loan management with disbursement workflows, and NID-based biometric authentication (fingerprint + face) integrated with Bangladesh Election Commission database.</li>
-        <li>Led R&amp;D, drove advanced feature development, mentored junior developers, and delivered client training across branch and agent rollouts.</li>
+        <li>Enterprise banking platform enabling financial inclusion via door-to-door banking agents — covers customer and account management, core banking API integration, all major transaction types, utility bill payments, and remittance.</li>
+        <li>FDR/DPS module with maturity tracking, loan management with disbursement and repayment workflows, and NID-based biometric authentication (fingerprint + face) integrated with the Bangladesh Election Commission database.</li>
+        <li>Redis-backed session management ensures high concurrency across thousands of simultaneous agent transactions; dual-database support (Oracle/MSSQL) for flexible bank-side deployments.</li>
       </ul>
     </div>
 
     <div class="pcard">
       <div class="pcard-top">
         <div class="pcard-title">International Research Data Collection &amp; Analysis Platform</div>
-        <div class="pcard-co">Freelance / Contract</div>
+        <div class="pcard-co">Freelance</div>
       </div>
       <div class="ptags"><span class="ptag">Python FastAPI</span><span class="ptag">React.js</span><span class="ptag">PostgreSQL</span><span class="ptag">Pandas / SciPy</span><span class="ptag">Data Analytics</span><span class="ptag">REST API</span></div>
       <ul>
@@ -423,7 +423,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
     <div class="pcard">
       <div class="pcard-top">
         <div class="pcard-title">Dynamic Reporting Service &amp; Business Intelligence Tool</div>
-        <div class="pcard-co">Freelance / Contract</div>
+        <div class="pcard-co">Freelance</div>
       </div>
       <div class="ptags"><span class="ptag">Java Spring Boot</span><span class="ptag">React.js</span><span class="ptag">MSSQL / Oracle / MySQL</span><span class="ptag">JasperReports</span><span class="ptag">Chart.js</span><span class="ptag">REST API</span></div>
       <ul>
@@ -487,7 +487,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
     <div class="pcard">
       <div class="pcard-top">
         <div class="pcard-title">AI-Driven Business Analytics SaaS Platform</div>
-        <div class="pcard-co">Freelance / Contract</div>
+        <div class="pcard-co">Freelance</div>
       </div>
       <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">Python</span><span class="ptag">React.js</span><span class="ptag">PostgreSQL</span><span class="ptag">OpenAI / Gemini / Claude</span></div>
       <ul>
@@ -501,7 +501,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
     <div class="pcard">
       <div class="pcard-top">
         <div class="pcard-title">Project Management Information System (PMIS)</div>
-        <div class="pcard-co">Freelance / Contract</div>
+        <div class="pcard-co">Freelance</div>
       </div>
       <div class="ptags"><span class="ptag">Python Django</span><span class="ptag">Angular</span><span class="ptag">MySQL</span><span class="ptag">REST API</span><span class="ptag">Chart.js</span></div>
       <ul>
@@ -514,7 +514,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
     <div class="pcard">
       <div class="pcard-top">
         <div class="pcard-title">Multi-Tenant Institute Management System</div>
-        <div class="pcard-co">Freelance / Contract</div>
+        <div class="pcard-co">Freelance</div>
       </div>
       <div class="ptags"><span class="ptag">Java Spring Boot</span><span class="ptag">Angular</span><span class="ptag">PostgreSQL</span><span class="ptag">Multi-Tenant</span><span class="ptag">Payment Gateway</span><span class="ptag">SMS / Email</span></div>
       <ul>
@@ -527,7 +527,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
     <div class="pcard">
       <div class="pcard-top">
         <div class="pcard-title">Automated Payroll &amp; HR Management System</div>
-        <div class="pcard-co">Freelance / Contract</div>
+        <div class="pcard-co">Freelance</div>
       </div>
       <div class="ptags"><span class="ptag">Python FastAPI</span><span class="ptag">React.js</span><span class="ptag">PostgreSQL</span><span class="ptag">Biometric Integration</span><span class="ptag">PDF Generation</span><span class="ptag">REST API</span></div>
       <ul>
@@ -540,7 +540,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
     <div class="pcard">
       <div class="pcard-top">
         <div class="pcard-title">B2B E-Commerce &amp; Inventory Platform</div>
-        <div class="pcard-co">Freelance / Contract</div>
+        <div class="pcard-co">Freelance</div>
       </div>
       <div class="ptags"><span class="ptag">Node.js</span><span class="ptag">React.js</span><span class="ptag">MySQL</span><span class="ptag">SSLCommerz</span><span class="ptag">REST API</span><span class="ptag">SMS / Email</span></div>
       <ul>
@@ -553,7 +553,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
     <div class="pcard">
       <div class="pcard-top">
         <div class="pcard-title">Field Force &amp; Sales Activity Management System</div>
-        <div class="pcard-co">Freelance / Contract</div>
+        <div class="pcard-co">Freelance</div>
       </div>
       <div class="ptags"><span class="ptag">Java Spring Boot</span><span class="ptag">React.js</span><span class="ptag">PostgreSQL</span><span class="ptag">GPS Tracking</span><span class="ptag">Mobile API</span><span class="ptag">REST API</span></div>
       <ul>
@@ -566,7 +566,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
     <div class="pcard">
       <div class="pcard-top">
         <div class="pcard-title">Clinic &amp; Healthcare Management System</div>
-        <div class="pcard-co">Freelance / Contract</div>
+        <div class="pcard-co">Freelance</div>
       </div>
       <div class="ptags"><span class="ptag">Python Django</span><span class="ptag">Angular</span><span class="ptag">PostgreSQL</span><span class="ptag">REST API</span><span class="ptag">PDF / Lab Reports</span><span class="ptag">SMS Alerts</span></div>
       <ul>
@@ -619,8 +619,10 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
       </div>
     </div>
     <ul class="exp-bullets">
-      <li>Driving architectural direction for wyzerp™ — a multi-tenant SaaS ERP platform deployed on Cloud.</li>
-      <li>Leading cross-team engineering initiatives, mentoring engineers, and owning platform uptime and security.</li>
+      <li>Define and drive architectural direction and technical strategy for wyzerp™ — an enterprise SaaS platform (Finance, HRMS, SCM, LMS, and other modules) deployed on Cloud in multi-tenant mode.</li>
+      <li>Lead and coordinate cross-team engineering initiatives spanning multiple concurrent projects.</li>
+      <li>Mentor engineers across the organisation and continuously raise the engineering quality bar.</li>
+      <li>Own multi-tenant infrastructure security, scalability, and platform uptime.</li>
     </ul>
   </div>
 
@@ -640,16 +642,17 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
       </div>
     </div>
     <ul class="exp-bullets">
-      <li>Led FSMMS — national food stock and market monitoring platform for the Government of Bangladesh.</li>
-      <li>Built Fingerprint Verification Service integrated with Bangladesh Election Commission database.</li>
-      <li>Contributed to eKYC, AML, and Dynamic Archiving Service with multi-DB and audit logging support.</li>
+      <li>Led design and development of the Food Stock and Market Monitoring System (FSMMS) — a national-scale government digital platform for food procurement, stock management, and distribution. Stack: Java Spring Boot, Angular, Oracle, Redis, Kafka.</li>
+      <li>Contributed to Digital Onboarding (eKYC) platforms and AML Compliance system, enhancing regulatory compliance and enabling secure, efficient customer onboarding for banking clients.</li>
+      <li>Delivered a Fingerprint Verification Service integrated with Bangladesh Election Commission (EC) database for banking authentication and loan borrower verification.</li>
+      <li>Built a configurable Dynamic Archiving Service supporting scheduled data migration, flexible DB connections, and robust audit logging.</li>
       <li>Conducted architectural reviews, requirements analysis, and cross-team code quality assessments.</li>
     </ul>
   </div>
 
   <div class="exp-block">
     <div class="exp-company-row">
-      <span class="exp-company-name">DataSoft Systems Bangladesh Ltd</span>
+      <span class="exp-company-name">DataSoft Systems Bangladesh Limited</span>
       <span class="exp-company-loc">Dhaka, Bangladesh</span>
     </div>
     <div class="exp-roles">
@@ -663,8 +666,10 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
       </div>
     </div>
     <ul class="exp-bullets">
-      <li>Built Agent Banking platform, eKYC solution, and AML Compliance system end-to-end.</li>
-      <li>Led R&D, mentored junior engineers, and delivered client training across branch rollouts.</li>
+      <li>Agent Banking: Built end-to-end banking agent platform — customer/account management, core banking API integration, all transaction types, utility billing, remittance, FDR/DPS, loan management, and NID biometric verification (fingerprint + face). Stack: ASP.NET Core, Oracle/MSSQL, Angular.</li>
+      <li>Digital Onboarding &amp; eKYC: Designed an AI-driven platform using OCR, face matching, and fingerprint biometrics — reduced customer onboarding from days to minutes. Stack: Python, ASP.NET Core, Oracle/MSSQL, Angular.</li>
+      <li>AML Compliance: Built transaction monitoring, customer due diligence, and automated screening modules for financial risk mitigation. Stack: ASP.NET MVC, Kafka, Elasticsearch, MSSQL.</li>
+      <li>Led R&amp;D, drove advanced feature development, mentored junior developers, and delivered client training across branch rollouts.</li>
     </ul>
   </div>
 
@@ -680,7 +685,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
       </div>
     </div>
     <ul class="exp-bullets">
-      <li>Contributed to aPOP ERP covering HR, Accounting, CRM, Inventory, Planning, and Production.</li>
+      <li>Contributed to aPOP — a full-featured ERP covering HR, Accounting, CRM, Inventory, Planning, and Production modules. Stack: ASP.NET MVC, MSSQL, AngularJS, Bootstrap.</li>
     </ul>
   </div>
 
@@ -696,7 +701,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
       </div>
     </div>
     <ul class="exp-bullets">
-      <li>Built Inventory Management System covering Requisition, Purchase Orders, Stock Workflow, and Reporting.</li>
+      <li>Built Inventory Management Software — Requisition, Purchase Orders, Stock Workflow, Transfer, and Reporting. Stack: ASP.NET MVC, MSSQL, JavaScript, Bootstrap.</li>
     </ul>
   </div>
 
