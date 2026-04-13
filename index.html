@@ -193,7 +193,6 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
       <li><a href="#awards">Awards</a></li>
       <li><a href="#education">Education</a></li>
     </ul>
-    <!-- <button class="print-btn" onclick="window.print()">Print / Save PDF</button> -->
   </div>
 </nav>
 
@@ -217,15 +216,11 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
       github.com/kawser2133
     </a>
-    <!-- <a class="contact-pill" href="#">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-      Dhaka, Bangladesh
-    </a> -->
   </div>
   <div class="hero-stats">
     <div class="stat"><div class="stat-n">9+</div><div class="stat-l">Years of Experience</div></div>
     <div class="stat"><div class="stat-n">20+</div><div class="stat-l">Major Projects</div></div>
-    <div class="stat"><div class="stat-n">3×</div><div class="stat-l">Microsoft Certified</div></div>
+    <div class="stat"><div class="stat-n">300+</div><div class="stat-l">GitHub Stars</div></div>
     <div class="stat"><div class="stat-n">2×</div><div class="stat-l">Top Performer</div></div>
   </div>
 </section>
@@ -233,7 +228,9 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
 <!-- SKILLS -->
 <section id="skills">
   <div class="sec-eyebrow">Skills & Technologies</div>
-  <table class="skills-table">
+  <table class="skills-table" aria-label="Skills and Technologies">
+    <thead><tr><th style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Category</th><th style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Skills</th></tr></thead>
+    <tbody>
     <tr>
       <td class="skill-label">Languages</td>
       <td>
@@ -370,6 +367,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
         </div>
       </td>
     </tr>
+  </tbody>
   </table>
 </section>
 
@@ -386,7 +384,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
       <div class="ptags"><span class="ptag">Frappe Framework</span><span class="ptag">Python</span><span class="ptag">JavaScript</span><span class="ptag">MariaDB</span><span class="ptag">Multi-Tenant</span><span class="ptag">Cloud</span></div>
       <ul>
         <li>Enterprise SaaS ERP platform covering Finance, HRMS, Supply Chain Management, Learning Management, and Payroll — deployed in multi-tenant cloud with full tenant data isolation and per-tenant configuration.</li>
-        <li>Modular architecture supports independent development, deployment, and scaling of each business domain without affecting other modules; integrated RBAC, audit logging, and operational monitoring across all tenants.</li>
+        <li>Modular architecture supports independent development, deployment, and scaling of each business domain; integrated RBAC, audit logging, and operational monitoring across all tenants.</li>
         <li>Automated tenant provisioning enables onboarding new organisations without downtime; built-in platform security, compliance controls, and high-availability infrastructure.</li>
       </ul>
     </div>
@@ -398,7 +396,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
       </div>
       <div class="ptags"><span class="ptag">Java Spring Boot</span><span class="ptag">React.js</span><span class="ptag">Oracle</span><span class="ptag">Redis</span><span class="ptag">Kafka</span><span class="ptag">Microservices</span></div>
       <ul>
-        <li>National digital platform for food procurement, stock management, distribution tracking, and real-time market price monitoring — serving government agencies and stakeholders across Bangladesh.</li>
+        <li>National digital platform for food procurement, stock management, distribution tracking, and real-time market price monitoring — serving 7,000,000+ beneficiaries across government agencies and stakeholders nationwide.</li>
         <li>Event-driven microservices architecture with Kafka for high-throughput data pipelines; Redis caching ensures real-time price feed updates across all districts with sub-second latency.</li>
         <li>Centralised visibility across the entire food supply chain — from procurement to warehouse stock levels to last-mile distribution — with configurable alert thresholds and compliance reporting for government oversight.</li>
       </ul>
@@ -425,7 +423,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
       </div>
       <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">Oracle / MSSQL</span><span class="ptag">Angular</span><span class="ptag">Redis</span><span class="ptag">Web API</span></div>
       <ul>
-        <li>Enterprise banking platform enabling financial inclusion via door-to-door banking agents — covers customer and account management, core banking API integration, all major transaction types, utility bill payments, and remittance.</li>
+        <li>Enterprise banking platform deployed at 3 banks — enabling financial inclusion via door-to-door banking agents with customer and account management, core banking API integration, all major transaction types, utility bill payments, and remittance.</li>
         <li>FDR/DPS module with maturity tracking, loan management with disbursement and repayment workflows, and NID-based biometric authentication (fingerprint + face) integrated with the Bangladesh Election Commission database.</li>
         <li>Redis-backed session management ensures high concurrency across thousands of simultaneous agent transactions; dual-database support (Oracle/MSSQL) for flexible bank-side deployments.</li>
       </ul>
@@ -628,13 +626,14 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
 
     <div class="pcard">
       <div class="pcard-top">
-        <div class="pcard-title">SaaSBase — Open-Source Multi-Tenant Foundation</div>
-        <div class="pcard-co">Open Source · github.com/kawser2133/saas-base</div>
+        <div class="pcard-title">Open-Source Contributions — 300+ GitHub Stars</div>
+        <div class="pcard-co">Open Source · github.com/kawser2133</div>
       </div>
-      <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">Clean Architecture</span><span class="ptag">Multi-Tenancy</span><span class="ptag">Docker</span><span class="ptag">SQL Server</span><span class="ptag">REST API</span></div>
+      <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">Angular</span><span class="ptag">Clean Architecture</span><span class="ptag">Multi-Tenancy</span><span class="ptag">Docker</span><span class="ptag">SQL Server</span><span class="ptag">REST API</span></div>
       <ul>
-        <li>Open-source, production-ready foundation for building large-scale enterprise multi-tenant SaaS applications — structured across Domain, Application, Infrastructure, and API layers.</li>
-        <li>Designed to give developers a solid, scalable starting point without rebuilding common SaaS infrastructure from scratch; publicly available on GitHub.</li>
+        <li><strong style="color:var(--ink)">saas-base</strong> — Production-ready multi-tenant SaaS foundation structured across Domain, Application, Infrastructure, and API layers; widely used as a starting point for enterprise SaaS projects.</li>
+        <li><strong style="color:var(--ink)">clean-structured-project</strong> (100+ ★) — Reference implementation of Clean Architecture with ASP.NET Core; one of the most starred .NET clean architecture templates on GitHub.</li>
+        <li><strong style="color:var(--ink)">web-api-project</strong> (100+ ★) — Practical Web API boilerplate with best-practice patterns for production-grade REST API development in .NET.</li>
       </ul>
     </div>
 
@@ -729,7 +728,7 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
 
   <div class="exp-block">
     <div class="exp-company-row">
-      <span class="exp-company-name">UY Systems Ltd / Express Digitally</span>
+      <span class="exp-company-name">UY Systems Ltd</span>
       <span class="exp-company-loc">Dhaka, Bangladesh</span>
     </div>
     <div class="exp-roles">
@@ -825,7 +824,6 @@ footer{background:var(--ink);padding:40px 0;text-align:center}
     <a href="mailto:kawser2133@gmail.com">kawser2133@gmail.com</a>
     <a href="https://linkedin.com/in/kawser2133" target="_blank">LinkedIn</a>
     <a href="https://github.com/kawser2133" target="_blank">GitHub</a>
-    <!-- <a href="#">Dhaka, Bangladesh</a> -->
   </div>
 </footer>
 
