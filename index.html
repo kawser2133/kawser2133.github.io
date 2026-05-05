@@ -381,7 +381,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:80px 24p
     <tbody>
     <tr>
       <td class="skill-label">Languages</td>
-      <td><div class="pills"><span class="pill p">C#</span><span class="pill p">Java</span><span class="pill p">Python</span><span class="pill p">JavaScript</span><span class="pill">TypeScript</span><span class="pill">SQL</span></div></td>
+      <td><div class="pills"><span class="pill p">C#</span><span class="pill p">Java</span><span class="pill p">Python</span><span class="pill p">JavaScript</span></div></td>
     </tr>
     <tr>
       <td class="skill-label">Frameworks</td>
@@ -397,7 +397,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:80px 24p
     </tr>
     <tr>
       <td class="skill-label">Architecture</td>
-      <td><div class="pills"><span class="pill p">Microservices</span><span class="pill p">Clean Architecture</span><span class="pill p">REST / Web API</span><span class="pill">Event-Driven Design</span><span class="pill">Multi-Tenancy</span></div></td>
+      <td><div class="pills"><span class="pill p">Microservices</span><span class="pill p">Clean Architecture</span><span class="pill p">REST / Web API</span><span class="pill">Multi-Tenancy</span></div></td>
     </tr>
     <tr>
       <td class="skill-label">Messaging</td>
@@ -409,15 +409,15 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:80px 24p
     </tr>
     <tr>
       <td class="skill-label">AI &amp; API Services</td>
-      <td><div class="pills"><span class="pill p">Claude API</span><span class="pill p">OpenAI API</span><span class="pill p">Gemini API</span><span class="pill">GitHub Copilot</span><span class="pill">OCR / Vision AI</span><span class="pill">Biometric APIs</span></div></td>
+      <td><div class="pills"><span class="pill p">Claude API</span><span class="pill p">OpenAI API</span><span class="pill p">Gemini API</span><span class="pill">OCR / Vision AI</span><span class="pill">Biometric APIs</span></div></td>
     </tr>
     <tr>
       <td class="skill-label">Domain</td>
-      <td><div class="pills"><span class="pill p">FinTech</span><span class="pill p">Agent Banking</span><span class="pill p">eKYC / Digital Onboarding</span><span class="pill p">AML Compliance</span><span class="pill p">SaaS / Multi-Tenant</span><span class="pill p">ERP</span><span class="pill p">EdTech / LMS</span><span class="pill p">Business Intelligence</span><span class="pill p">AI Analytics</span><span class="pill p">GovTech</span><span class="pill">Healthcare</span><span class="pill">E-Commerce</span><span class="pill">Fleet &amp; Logistics</span><span class="pill">HR &amp; Payroll</span><span class="pill">Research Platforms</span><span class="pill">Field Force Management</span><span class="pill">Data Archiving</span></div></td>
+      <td><div class="pills"><span class="pill p">FinTech</span><span class="pill p">Agent Banking</span><span class="pill p">ERP</span><span class="pill p">eKYC / Digital Onboarding</span><span class="pill p">AML Compliance</span><span class="pill p">SaaS / Multi-Tenant</span><span class="pill p">EdTech / LMS</span><span class="pill p">GovTech</span><span class="pill">Healthcare</span><span class="pill">E-Commerce</span></div></td>
     </tr>
     <tr>
       <td class="skill-label">Process</td>
-      <td><div class="pills"><span class="pill p">Agile / Scrum</span><span class="pill">TDD</span><span class="pill">Code Review</span><span class="pill">Technical Mentoring</span><span class="pill">Architecture Review</span></div></td>
+      <td><div class="pills"><span class="pill p">Agile / Scrum</span><span class="pill">TDD</span><span class="pill">Code Review</span><span class="pill">Technical Mentoring</span></div></td>
     </tr>
     </tbody>
   </table>
@@ -450,6 +450,25 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:80px 24p
 
   <div class="project-grid">
     <div class="pcard">
+      <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">Oracle / MSSQL</span><span class="ptag">Angular</span><span class="ptag">Redis</span><span class="ptag">RabbitMQ</span></div>
+      <div class="pcard-top"><div class="pcard-title">Agent Banking Platform</div></div>
+      <ul>
+        <li>Enterprise banking platform deployed at 3 banks — enabling financial inclusion via door-to-door banking agents with customer and account management, core banking API integration, all major transaction types, utility bill payments, and remittance.</li>
+        <li>FDR/DPS module with maturity tracking, loan management with disbursement and repayment workflows, and NID-based biometric authentication (fingerprint + face) integrated with the Bangladesh Election Commission database.</li>
+        <li>Redis-backed session management ensures high concurrency across thousands of simultaneous agent transactions; dual-database support (Oracle/MSSQL) for flexible bank-side deployments.</li>
+      </ul>
+    </div>
+    
+    <div class="pcard">
+      <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">Python</span><span class="ptag">Oracle / MSSQL</span><span class="ptag">Angular</span><span class="ptag">OCR</span><span class="ptag">Face Match</span></div>
+      <div class="pcard-top"><div class="pcard-title">Digital Onboarding &amp; eKYC Solution</div></div>
+      <ul>
+        <li>AI-driven eKYC platform for NID-based digital customer onboarding — reduced onboarding from days to minutes through automated OCR, face matching, and fingerprint biometrics.</li>
+        <li>Python-powered document intelligence layer extracts and validates NID data; face match engine compares live selfie against NID photo with liveness detection.</li>
+        <li>Seamlessly integrated into the Agent Banking and core banking workflow for regulated onboarding of banking clients.</li>
+      </ul>
+    </div>
+    <div class="pcard">
       <div class="ptags"><span class="ptag">Node.js</span><span class="ptag">React.js</span><span class="ptag">MySQL</span><span class="ptag">Zoom API</span><span class="ptag">SSLCommerz</span><span class="ptag">Trinity Similarity</span></div>
       <div class="pcard-top"><div class="pcard-title">EduFlex — Digital Learning Management Portal</div></div>
       <ul>
@@ -457,15 +476,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:80px 24p
         <li>Integrated Zoom API for live virtual classes; SSLCommerz payment gateway for enrollment fees; Trinity similarity check for plagiarism detection on submitted assignments and exam answers.</li>
         <li>Proctored online exam engine with timer, randomised question sets, and auto-grading; automated certificate generation on course completion.</li>
         <li>Multi-role portal (Admin, Instructor, Student) with responsive public website; deployed for BIM's national professional training programmes.</li>
-      </ul>
-    </div>
-    <div class="pcard">
-      <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">Oracle / MSSQL</span><span class="ptag">Angular</span><span class="ptag">Redis</span><span class="ptag">RabbitMQ</span></div>
-      <div class="pcard-top"><div class="pcard-title">Agent Banking Platform</div></div>
-      <ul>
-        <li>Enterprise banking platform deployed at 3 banks — enabling financial inclusion via door-to-door banking agents with customer and account management, core banking API integration, all major transaction types, utility bill payments, and remittance.</li>
-        <li>FDR/DPS module with maturity tracking, loan management with disbursement and repayment workflows, and NID-based biometric authentication (fingerprint + face) integrated with the Bangladesh Election Commission database.</li>
-        <li>Redis-backed session management ensures high concurrency across thousands of simultaneous agent transactions; dual-database support (Oracle/MSSQL) for flexible bank-side deployments.</li>
       </ul>
     </div>
     <div class="pcard">
@@ -478,24 +488,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:80px 24p
         <li>Integrated third-party email notification services and webhook callbacks for real-time response alerts to research coordinators.</li>
       </ul>
     </div>
-    <div class="pcard">
-      <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">Python</span><span class="ptag">Oracle / MSSQL</span><span class="ptag">Angular</span><span class="ptag">OCR</span><span class="ptag">Face Match</span></div>
-      <div class="pcard-top"><div class="pcard-title">Digital Onboarding &amp; eKYC Solution</div></div>
-      <ul>
-        <li>AI-driven eKYC platform for NID-based digital customer onboarding — reduced onboarding from days to minutes through automated OCR, face matching, and fingerprint biometrics.</li>
-        <li>Python-powered document intelligence layer extracts and validates NID data; face match engine compares live selfie against NID photo with liveness detection.</li>
-        <li>Seamlessly integrated into the Agent Banking and core banking workflow for regulated onboarding of banking clients.</li>
-      </ul>
-    </div>
-    <div class="pcard">
-      <div class="ptags"><span class="ptag">Java Spring Boot</span><span class="ptag">React.js</span><span class="ptag">MSSQL / Oracle / MySQL</span><span class="ptag">JasperReports</span><span class="ptag">Chart.js</span><span class="ptag">REST API</span></div>
-      <div class="pcard-top"><div class="pcard-title">Dynamic Reporting Service &amp; Business Intelligence Tool</div></div>
-      <ul>
-        <li>Database-agnostic reporting engine built on Java Spring Boot — connects to MSSQL, Oracle, and MySQL through configurable data-source profiles without any code change.</li>
-        <li>Drag-and-drop report designer with grouping, aggregations, drill-down, and parameterised filtering; exports to PDF, Excel, and HTML via JasperReports.</li>
-        <li>KPI dashboards with Chart.js visualisations and scheduled automated report delivery via email; adopted across Finance, HR, and Operations departments.</li>
-      </ul>
-    </div>
+   
     <div class="pcard">
       <div class="ptags"><span class="ptag">ASP.NET MVC</span><span class="ptag">Kafka</span><span class="ptag">Elasticsearch</span><span class="ptag">MSSQL</span><span class="ptag">REST API</span></div>
       <div class="pcard-top"><div class="pcard-title">AML Compliance System</div></div>
@@ -505,6 +498,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:80px 24p
         <li>Configurable rule engine for suspicious transaction detection; automated STR (Suspicious Transaction Report) generation for compliance officers.</li>
       </ul>
     </div>
+    
     <div class="pcard">
       <div class="ptags"><span class="ptag">ASP.NET Core</span><span class="ptag">Angular</span><span class="ptag">PostgreSQL</span><span class="ptag">Audit Logging</span><span class="ptag">REST API</span></div>
       <div class="pcard-top"><div class="pcard-title">Dynamic Archiving Service</div></div>
@@ -512,6 +506,15 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:80px 24p
         <li>Configurable database archiving solution with flexible DB connections, scheduled archiving jobs, table-level selection, and robust audit logging — deployed for government and enterprise clients.</li>
         <li>Archived data remains queryable and restorable through a secure API; full record-level versioning ensures compliance and traceability.</li>
         <li>Dramatically reduces live database size and improves query latency without any changes to consuming applications.</li>
+      </ul>
+    </div>
+     <div class="pcard">
+      <div class="ptags"><span class="ptag">Java Spring Boot</span><span class="ptag">React.js</span><span class="ptag">MSSQL / Oracle / MySQL</span><span class="ptag">JasperReports</span><span class="ptag">Chart.js</span><span class="ptag">REST API</span></div>
+      <div class="pcard-top"><div class="pcard-title">Dynamic Reporting Service &amp; Business Intelligence Tool</div></div>
+      <ul>
+        <li>Database-agnostic reporting engine built on Java Spring Boot — connects to MSSQL, Oracle, and MySQL through configurable data-source profiles without any code change.</li>
+        <li>Drag-and-drop report designer with grouping, aggregations, drill-down, and parameterised filtering; exports to PDF, Excel, and HTML via JasperReports.</li>
+        <li>KPI dashboards with Chart.js visualisations and scheduled automated report delivery via email; adopted across Finance, HR, and Operations departments.</li>
       </ul>
     </div>
     <div class="pcard">
@@ -952,7 +955,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:80px 24p
       const s = localStorage.getItem(THEME_KEY);
       if (s === 'light' || s === 'dark') return s;
     } catch (_) {}
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    return 'light';
   }
 
   function applyTheme(theme, persist) {
