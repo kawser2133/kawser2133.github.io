@@ -398,8 +398,16 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:80px 24p
 }
 
 /* HERO HINT */
-.hero-hint{font-size:12.5px;color:var(--muted2);margin:-16px 0 28px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;line-height:1.5}
+.hero-hint{font-size:12.5px;margin:-16px 0 28px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;line-height:1.5}
 .hero-hint-sep{color:var(--border);user-select:none}
+.hero-hint-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 13px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.01em;border:1px solid;line-height:1.3}
+.hero-hint-chip svg{width:12px;height:12px;flex-shrink:0;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:currentColor}
+.hero-hint-chip.blue{color:var(--accent);background:var(--accent-pale);border-color:var(--accent-border)}
+.hero-hint-chip.purple{color:#a78bfa;background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.28)}
+.hero-hint-chip.green{color:#34d399;background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.28)}
+html[data-theme="light"] .hero-hint-chip.blue{color:#2563eb;background:rgba(37,99,235,.09);border-color:rgba(37,99,235,.25)}
+html[data-theme="light"] .hero-hint-chip.purple{color:#7c3aed;background:rgba(124,58,237,.08);border-color:rgba(124,58,237,.25)}
+html[data-theme="light"] .hero-hint-chip.green{color:#059669;background:rgba(5,150,105,.08);border-color:rgba(5,150,105,.25)}
 
 /* PROJECT TABS */
 .proj-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
@@ -459,11 +467,14 @@ html[data-theme="light"] .cert-card-coursera{background:linear-gradient(135deg,r
   <h1>Senior Software Engineer &amp; <i>Technical Lead</i></h1>
   <p class="hero-bio">Software Engineer with 9+ years building production-grade systems across FinTech, GovTech, ERP, EdTech, and SaaS. Expert in C# (.NET Core), Java Spring Boot, and Python — specialising in Agent Banking, eKYC, AML Compliance, and AI-driven analytics. Technical leader who architects scalable multi-tenant platforms and delivers complex enterprise projects end-to-end.</p>
   <div class="hero-hint">
-    <span>Engineering Manager @ Wyze Tech</span>
-    <span class="hero-hint-sep">·</span>
-    <span>Visiting Instructor @ Bangladesh Institute of Management (BIM)</span>
-    <span class="hero-hint-sep">·</span>
-    <span>Open to Freelance &amp; Contract</span>
+    <span class="hero-hint-chip blue">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      Engineering Manager @ Wyze Tech
+    </span>
+    <span class="hero-hint-chip purple">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      Visiting Instructor @ Bangladesh Institute of Management (BIM)
+    </span>
   </div>
   <div class="hero-contacts">
     <a class="contact-pill" href="mailto:kawser2133@gmail.com">
@@ -969,7 +980,7 @@ html[data-theme="light"] .cert-card-coursera{background:linear-gradient(135deg,r
         <div class="exp-company-name">Bangladesh Institute of Management</div>
         <div class="exp-roles">
           <div class="exp-role-item">
-            <span class="exp-role-title">Visiting Instructor <span class="exp-contract-badge">Contract</span></span>
+            <span class="exp-role-title">Visiting Instructor <span class="exp-contract-badge">Part-time</span></span>
             <span class="exp-period">Oct 2016 – Present</span>
           </div>
         </div>
